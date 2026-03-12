@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let total = 0;
 
     if (cart.length === 0) {
-      cartList.innerHTML = `<li class="cart-empty-msg">Sua garagem está vazia 🛵</li>`;
+      cartList.innerHTML = `<li class="cart-empty-msg">Sua garagem está vazia</li>`;
     } else {
       cart.forEach((item, index) => {
         const li = document.createElement("li");
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCheckout.addEventListener('click', () => {
       if (cart.length === 0) return;
       const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-      alert(`Processando a reserva do seu veículo no valor de ${formatCurrency(total)}... \nObrigado por escolher a E-Motors!`);
+      alert(`Processando a reserva do seu veículo no valor de ${formatCurrency(total)}`);
       cart = [];
       updateCartUI();
       closeCart();
