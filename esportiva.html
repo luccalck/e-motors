@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Sport 1000 - E-Motors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="logo"><span>E-Motors</span></a>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Showroom</a>
+        <a class="nav__link" href="participantes.html">Nossa Equipe</a>
+        <button class="nav__link nav__cart" type="button" id="cartButton">
+          Garagem <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="detail-hero">
+      <div class="detail-gallery">
+        <div class="detail-image">
+          <img src="Imagens/esport1.png" alt="Esportiva Principal">
+        </div>
+        <div class="thumbnail-list">
+          <img class="thumbnail active" src="Imagens/esport1.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/esport2.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/esport3.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/esport4.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/esport5.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+      <div class="detail-info">
+        <h1>E-Sport 1000</h1>
+        <span class="price-tag">R$ 22.900,00</span>
+        <p>A E-Sport 1000 entrega aceleração instantânea e um torque impressionante.</p>
+        <div class="detail-actions">
+          <button class="primary-btn add-to-cart-btn" data-name="E-Sport 1000" data-price="22900.00" data-image="Imagens/esport1.png" type="button">Adicionar à Garagem</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-comments">
+      <h2>Avaliações de Clientes</h2>
+      <div class="comments-grid">
+        <div class="comment-card">
+          <strong>Fernanda L. ⭐⭐⭐⭐⭐</strong>
+          <span>"O torque inicial dessa moto elétrica é surreal! Deixa muita moto a combustão pra trás."</span>
+        </div>
+        <div class="comment-card">
+          <strong>André K. ⭐⭐⭐⭐⭐</strong>
+          <span>"Entrega rápida da concessionária, a moto tem uma estabilidade perfeita em curvas."</span>
+        </div>
+        <div class="comment-card">
+          <strong>Camila D. ⭐⭐⭐⭐⭐</strong>
+          <span>"Chama muita atenção por onde passa. Uma obra de arte elétrica."</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__info"><p><strong>E-Motors</strong> © 2026.</p></div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-drawer">
+      <div class="cart-header"><h2>Sua Garagem</h2><button class="cart-close" id="closeCart">&times;</button></div>
+      <div class="cart-body"><ul class="cart-list" id="cartList"></ul></div>
+      <div class="cart-footer">
+        <div class="summary-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+        <div class="summary-row"><span>Frete</span><span style="color: var(--accent); font-weight: 600;">Grátis</span></div>
+        <div class="summary-total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+        <button class="primary-btn" id="checkoutButton">Finalizar Pedido</button>
+      </div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Normalização de finais de linha e tratamento de binários
+# Mantém arquivos de texto com LF no repositório para evitar diffs de EOL
+* text=auto
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+
+# Arquivos binários (não aplicar normalização de texto)
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary

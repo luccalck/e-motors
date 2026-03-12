@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Urban 500 - E-Motors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="logo"><span>E-Motors</span></a>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Showroom</a>
+        <a class="nav__link" href="participantes.html">Nossa Equipe</a>
+        <button class="nav__link nav__cart" type="button" id="cartButton">
+          Garagem <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="detail-hero">
+      <div class="detail-gallery">
+        <div class="detail-image">
+          <img src="Imagens/urban1.png" alt="Urbana Principal">
+        </div>
+        <div class="thumbnail-list">
+          <img class="thumbnail active" src="Imagens/urban1.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/urban2.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/urban3.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/urban4.png" onclick="changeMainImage(this)">
+          <img class="thumbnail" src="Imagens/urban5.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+      <div class="detail-info">
+        <h1>E-Urban 500</h1>
+        <span class="price-tag">R$ 14.300,00</span>
+        <p>A E-Urban 500 é o equilíbrio ideal entre conforto e economia diária.</p>
+        <div class="detail-actions">
+          <button class="primary-btn add-to-cart-btn" data-name="E-Urban 500" data-price="14300.00" data-image="Imagens/urban1.png" type="button">Adicionar à Garagem</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-comments">
+      <h2>Avaliações de Clientes</h2>
+      <div class="comments-grid">
+        <div class="comment-card">
+          <strong>Marina R. ⭐⭐⭐⭐⭐</strong>
+          <span>"Super confortável para andar em dupla. A autonomia me surpreendeu positivamente."</span>
+        </div>
+        <div class="comment-card">
+          <strong>Paulo V. ⭐⭐⭐⭐</strong>
+          <span>"Ótimo custo-benefício. Melhor investimento que fiz para o meu transporte diário."</span>
+        </div>
+        <div class="comment-card">
+          <strong>Larissa T. ⭐⭐⭐⭐⭐</strong>
+          <span>"Adorei a leveza da moto no trânsito e como é fácil colocá-la para carregar."</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__info"><p><strong>E-Motors</strong> © 2026.</p></div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-drawer">
+      <div class="cart-header"><h2>Sua Garagem</h2><button class="cart-close" id="closeCart">&times;</button></div>
+      <div class="cart-body"><ul class="cart-list" id="cartList"></ul></div>
+      <div class="cart-footer">
+        <div class="summary-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+        <div class="summary-row"><span>Frete</span><span style="color: var(--accent); font-weight: 600;">Grátis</span></div>
+        <div class="summary-total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+        <button class="primary-btn" id="checkoutButton">Finalizar Pedido</button>
+      </div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equipe - E-Motors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="logo"><span>E-Motors</span></a>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Showroom</a>
+        <a class="nav__link" href="participantes.html">Nossa Equipe</a>
+        <button class="nav__link nav__cart" type="button" id="cartButton">
+          Garagem <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="participants-hero">
+      <h1>Nossa Equipe</h1>
+      <p>Desenvolvedores da plataforma E-Motors.</p>
+    </section>
+
+    <section class="participants-grid">
+      <article class="participant-card">
+        <h3>Miguel Oliveira</h3>
+        <a class="participant-email" href="mailto:Miguel.senai2024@gmail.com">Miguel.senai2024@gmail.com</a>
+      </article>
+      <article class="participant-card">
+        <h3>Lucca Castilho</h3>
+        <a class="participant-email" href="mailto:luccacc.contato@gmail.com">luccacc.contato@gmail.com</a>
+      </article>
+      <article class="participant-card">
+        <h3>João Gabriel</h3>
+        <a class="participant-email" href="mailto:joao.florianosenai@gmail.com">joao.florianosenai@gmail.com</a>
+      </article>
+      <article class="participant-card">
+        <h3>Lucas Souza</h3>
+        <a class="participant-email" href="mailto:lucas.ssouzasenai@gmail.com">lucas.ssouzasenai@gmail.com</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__info"><p><strong>E-Motors</strong> © 2026.</p></div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-drawer">
+      <div class="cart-header"><h2>Sua Garagem</h2><button class="cart-close" id="closeCart">&times;</button></div>
+      <div class="cart-body"><ul class="cart-list" id="cartList"></ul></div>
+      <div class="cart-footer">
+        <div class="summary-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+        <div class="summary-row"><span>Frete</span><span style="color: var(--accent); font-weight: 600;">Grátis</span></div>
+        <div class="summary-total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+        <button class="primary-btn" id="checkoutButton">Finalizar Pedido</button>
+      </div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

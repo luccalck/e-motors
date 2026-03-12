@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Motors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="logo"><span>E-Motors</span></a>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Showroom</a>
+        <a class="nav__link" href="participantes.html">Nossa Equipe</a>
+        <button class="nav__link nav__cart" type="button" id="cartButton">
+          Garagem <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="carousel-section">
+      <div class="carousel-frame" id="carouselTrack">
+        <img class="carousel-slide active" src="Imagens/scooterx1.png" alt="Tecnologia">
+        <img class="carousel-slide" src="Imagens/esport1.png" alt="Mobilidade">
+        <img class="carousel-slide" src="Imagens/urban1.png" alt="Performance">
+        <div class="carousel-overlay"></div>
+      </div>
+    </section>
+
+    <section class="products">
+      <h2 class="section-title">Nossos Veículos</h2>
+      <div class="products__grid">
+        <article class="product-card" data-link="scooter.html">
+          <img src="Imagens/scooterx1.png" alt="Scooter City X">
+          <div class="product-card__body">
+            <h3>Scooter City X</h3>
+            <p class="price">R$ 8.500,00</p>
+            <button class="secondary-btn add-to-cart-btn" data-name="Scooter City X" data-price="8500.00" data-image="Imagens/scooterx1.png" type="button">Comprar Agora</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-link="esportiva.html">
+          <img src="Imagens/esport1.png" alt="E-Sport 1000">
+          <div class="product-card__body">
+            <h3>E-Sport 1000</h3>
+            <p class="price">R$ 22.900,00</p>
+            <button class="secondary-btn add-to-cart-btn" data-name="E-Sport 1000" data-price="22900.00" data-image="Imagens/esport1.png" type="button">Comprar Agora</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-link="urbana.html">
+          <img src="Imagens/urban1.png" alt="E-Urban 500">
+          <div class="product-card__body">
+            <h3>E-Urban 500</h3>
+            <p class="price">R$ 14.300,00</p>
+            <button class="secondary-btn add-to-cart-btn" data-name="E-Urban 500" data-price="14300.00" data-image="Imagens/urban1.png" type="button">Comprar Agora</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__info">
+      <p><strong>E-Motors</strong> © 2026. Todos os direitos reservados.</p>
+      <p>Contato: contato@emotors.com.br</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-drawer" role="dialog" aria-modal="true">
+      <div class="cart-header">
+        <h2>Sua Garagem</h2>
+        <button class="cart-close" type="button" id="closeCart">&times;</button>
+      </div>
+      <div class="cart-body">
+        <ul class="cart-list" id="cartList"></ul>
+      </div>
+      <div class="cart-footer">
+        <div class="summary-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+        <div class="summary-row"><span>Frete</span><span style="color: var(--accent); font-weight: 600;">Grátis</span></div>
+        <div class="summary-total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+        <button class="primary-btn" type="button" id="checkoutButton">Finalizar Pedido</button>
+      </div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
